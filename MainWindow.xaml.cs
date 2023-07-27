@@ -15,6 +15,7 @@ namespace Littlefoot.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ByteClient _byteClient;
 
         class ByteClient : TcpClient
         {
@@ -80,23 +81,18 @@ namespace Littlefoot.UI
             Trace.WriteLine($"TCP server address: {address}");
             Trace.WriteLine($"TCP server port: {port}");
 
-
             // Create a new TCP chat client
-            var client = new ByteClient(address, port, OnReceived);
+            _byteClient = new ByteClient(address, port, OnReceived);
 
             // Connect the client
-            Console.Write("Client connecting...");
-            client.ConnectAsync();
+            Trace.Write("Client connecting...");
+            _byteClient.ConnectAsync();
             Trace.WriteLine("Done!");
-
-            Trace.WriteLine("Press Enter to stop the client or '!' to reconnect the client...");
 
         }
 
         private void OnReceived(byte[] buffer, long offset, long size)
         {
-            Console.WriteLine(Encoding.UTF8.GetString(buffer, (int)offset, (int)size));
-
             Shape[] fixtures = { Fixture1, Fixture2, Fixture3, Fixture4, Fixture5, Fixture6 };
             
             for (int i = 0; i < 6; i++)
@@ -113,6 +109,87 @@ namespace Littlefoot.UI
                     fixtures[i].Fill = mySolidColorBrush;
                 }));
             }
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            SendCommand("START_STOP");
+        }
+
+        private void SendCommand(string command)
+        {
+            if (_byteClient.IsConnected)
+                _byteClient.SendAsync(Encoding.UTF8.GetBytes(command));
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            SendCommand("PAUSE_CONTINUE");
+        }
+
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            SendCommand("TAP");
+        }
+
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button6_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button7_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button8_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button9_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button10_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void ButtonUp_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDown_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FadeTimePedal_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void MasterDimmerPedal_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }

@@ -13,6 +13,45 @@
         <Rectangle x:Name="Fixture4" HorizontalAlignment="Left" Height="60" Margin="222,29,0,0" Stroke="Black" VerticalAlignment="Top" Width="60" Fill="Black"/>
         <Rectangle x:Name="Fixture5" HorizontalAlignment="Left" Height="60" Margin="287,29,0,0" Stroke="Black" VerticalAlignment="Top" Width="60" Fill="Black"/>
         <Rectangle x:Name="Fixture6" HorizontalAlignment="Left" Height="60" Margin="352,29,0,0" Stroke="Black" VerticalAlignment="Top" Width="60" Fill="Black"/>
+        <Button x:Name="Button1" HorizontalAlignment="Left" Margin="26,251,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button1_Click" VerticalContentAlignment="Center">
+            <TextBlock TextAlignment="Center">1<LineBreak/>GO</TextBlock>
+        </Button>
+        <Button x:Name="Button2" HorizontalAlignment="Left" Margin="85,251,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button2_Click">
+            <TextBlock TextAlignment="Center">2<LineBreak/>PAUSE</TextBlock>
+        </Button>
+        <Button x:Name="Button3" HorizontalAlignment="Left" Margin="145,251,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button3_Click">
+            <TextBlock TextAlignment="Center">3<LineBreak/>TAP</TextBlock>
+        </Button>
+        <Button x:Name="Button4" HorizontalAlignment="Left" Margin="203,251,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button4_Click">
+            <TextBlock TextAlignment="Center">4<LineBreak/>N/A</TextBlock>
+        </Button>
+        <Button x:Name="Button5" HorizontalAlignment="Left" Margin="258,251,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button5_Click">
+            <TextBlock TextAlignment="Center">5<LineBreak/>DOWN</TextBlock>
+        </Button>
+        <Button x:Name="Button6" HorizontalAlignment="Left" Margin="55,155,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button6_Click">
+            <TextBlock TextAlignment="Center">6<LineBreak/>Go</TextBlock>
+        </Button>
+        <Button x:Name="Button7" HorizontalAlignment="Left" Margin="114,155,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button7_Click">
+            <TextBlock TextAlignment="Center">7<LineBreak/>Go</TextBlock>
+        </Button>
+        <Button x:Name="Button8" HorizontalAlignment="Left" Margin="174,155,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button8_Click">
+            <TextBlock TextAlignment="Center">8<LineBreak/>Go</TextBlock>
+        </Button>
+        <Button x:Name="Button9" HorizontalAlignment="Left" Margin="232,155,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button9_Click">
+            <TextBlock TextAlignment="Center">9<LineBreak/>BLACK<LineBreak/>OUT</TextBlock>
+        </Button>
+        <Button x:Name="Button10" HorizontalAlignment="Left" Margin="287,155,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="Button10_Click">
+            <TextBlock TextAlignment="Center">0<LineBreak/>UP</TextBlock>
+        </Button>
+        <Button x:Name="ButtonUp" HorizontalAlignment="Left" Margin="342,155,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="ButtonUp_Click">
+            <TextBlock TextAlignment="Center">N/A</TextBlock>
+        </Button>
+        <Button x:Name="ButtonDown" HorizontalAlignment="Left" Margin="342,251,0,0" VerticalAlignment="Top" Height="80" Width="40" Click="ButtonDown_Click">
+            <TextBlock TextAlignment="Center">N/A</TextBlock>
+        </Button>
+
+        <Slider x:Name="FadeTimePedal" HorizontalAlignment="Left" Margin="416,155,0,0" VerticalAlignment="Top" Width="47" ValueChanged="FadeTimePedal_ValueChanged" Orientation="Vertical" Height="176" VerticalContentAlignment="Center" Maximum="255"/>
+        <Slider x:Name="MasterDimmerPedal" HorizontalAlignment="Left" Margin="468,155,0,0" VerticalAlignment="Top" Width="47" ValueChanged="MasterDimmerPedal_ValueChanged" Orientation="Vertical" Height="176"/>
 
     </Grid>
 </Window>
